@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tests Analizador CSV</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mocha.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="../csv.js"></script>
+    <script type="text/html" src="../template.html" id="template"></script>
+
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <div>
+      <i>Escriba un string CSV. Al hacer click en el butón se mostrará una tabla con la interpretación de los datos</i>
+    </div>
+    <p></p>
+    <tr>
+      <th>String CSV:</th> <!-- autofocus attribute is HTML5 -->
+      <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
+    </tr>
+    <button type="button" id="buttona">Tabla</button><br>
+    <span class="output" id="finaltable"></span>
+
+    <script src="chai.js"></script>
+    <script src="mocha.js"></script>
+
+    <script>mocha.setup('tdd')</script>
+
+    <script src="blanket.js"
+      data-cover-adapter="mocha-blanket.js"></script>
+    <script src="../csv.js" data-cover></script>
+
+
+    <script src="tests.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>

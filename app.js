@@ -13,7 +13,7 @@ app.use(expressLayouts);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (request, response) {
-    response.render('index', { title: 'Analizador CSV' });
+    response.render('index', { title: 'Analizador Lexico' });
 });
 
 app.listen(app.get('port'), function () {
