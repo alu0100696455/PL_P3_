@@ -6,6 +6,8 @@ body {
   color:#777;
   font-weight:300;
   background-image: url("../img/bck.png");
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
