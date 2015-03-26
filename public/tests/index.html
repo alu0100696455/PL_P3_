@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mocha.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script type="text/javascript" src="../csv.js"></script>
-    <script type="text/html" src="../template.html" id="template"></script>
-
+    <script type="text/javascript" src="../tokens.js"></script>
+    <script type="text/javascript" src="../parse.js"></script>
+    <script type="text/javascript" src="../main.js"></script>
   </head>
   <body>
     <div id="mocha"></div>
 
-    <div>
-      <i>Escriba un string CSV. Al hacer click en el butón se mostrará una tabla con la interpretación de los datos</i>
+    <div align="center">
+        <h2>Input</h2>
+        <p>
+            Fill the input box with javascript code:
+        </p>
+        <textarea id="INPUT" cols="70" rows="10">
+            var a = "hello"; // initialize a
+            var b = function(x) {
+                    var c = 3;
+                      return x+c;
+                    };
+        </textarea>
+        <br>
+        <input id="PARSE" value=Parsear type=button>
+        <br><br>
+        <div id="cajita">
+            <pre id="OUTPUT"></pre>
+        </div>
     </div>
-    <p></p>
-    <tr>
-      <th>String CSV:</th> <!-- autofocus attribute is HTML5 -->
-      <td><textarea autofocus cols = "80" rows = "5" id="original"></textarea></td>
-    </tr>
-    <button type="button" id="buttona">Tabla</button><br>
-    <span class="output" id="finaltable"></span>
 
     <script src="chai.js"></script>
     <script src="mocha.js"></script>
@@ -32,7 +40,8 @@
 
     <script src="blanket.js"
       data-cover-adapter="mocha-blanket.js"></script>
-    <script src="../csv.js" data-cover></script>
+    <script src="../tokens.js" data-cover></script>
+    <script src="../parse.js" data-cover></script>
 
 
     <script src="tests.js"></script>
