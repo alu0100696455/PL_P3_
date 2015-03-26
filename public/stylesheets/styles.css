@@ -42,9 +42,13 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color:white;
   font-weight:400;
   text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
 }
 
 a small {
@@ -179,6 +183,29 @@ footer {
   position:fixed;
   bottom:50px;
 }
+
+div#enlaces {
+  text-align:left;
+}
+
+div#autores {
+  text-align:right;
+}
+
+div#cajita {
+  width:512px;
+  overflow:auto;
+}
+
+#INPUT {
+  width:512px;
+}
+
+#OUTPUT {
+  text-align:left;
+}
+
+
 
 @media print, screen and (max-width: 960px) {
 
