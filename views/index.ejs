@@ -1,18 +1,14 @@
 <h1>Analizador Léxico JavaScript</h1>
 <div align="center">
-    <h2>Input</h2>
-    <p>
-        Fill the input box with javascript code:
-    </p>
-    <textarea id="INPUT"cols="70" rows="10">
-        var a = "hello"; // initialize a
-        var b = function(x) {
-                var c = 3;
-                  return x+c;
-                };
-    </textarea>
+    <h2>Entrada</h2>
     <br>
-    <input id="PARSE" value=Parsear type=button>
+    <div id="upload">
+        <input type="file" id="select" accept=".js"/>
+    </div>
+    <br>
+    <textarea id="INPUT"placeholder="Escriba aquí. También puede arrastrar un fichero"></textarea>
+    <br>
+    <input id="PARSE" value=Analizar type=button>
     <br><br>
     <div id="cajita">
         <pre id=OUTPUT></pre>
@@ -23,7 +19,6 @@
     <br>
     <a href="enlace a travis">Travis</a>
 </div>
-<br><br><br>
 <div id="autores">
     <a href="https://alu0100696455.github.io">Jonathan Expósito Martín</a>
     <br>
