@@ -1,13 +1,17 @@
 # Práctica 3 Procesadores de Lenguajes
 
 
-## Analizador Léxico para Un Subconjunto de JavaScript Taller
+## Analizador Léxico para un subconjunto de JavaScript
 
 ##### Con soporte para Travis y Heroku.
 
 ### Heroku
 
-[Aplicación en Heroku](https://github.com/alu0100696455/PL_P3_Analizador/ "Heroku")
+[Aplicación en Heroku](http://analizador-lexico-pl.herokuapp.com/ "Heroku")
+
+### Travis
+
+[![Build Status](https://travis-ci.org/alu0100696455/PL_P3_Analizador.svg?branch=master)](https://travis-ci.org/alu0100696455/PL_P3_Analizador)
 
 ### Gulp
 
@@ -17,15 +21,9 @@ Lista de tareas implementadas:
 >
 > clear
 >
-> test
+> tests
 >
 > default
-
-
-### Travis
-
-
-
 
 ### Autores:
 
