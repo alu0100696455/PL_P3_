@@ -2,6 +2,12 @@ var assert = chai.assert;
 
 suite('Analizador Lexico', function() {
 
+  setup(function(){
+    if (typeof __html__ !== 'undefined') {
+      document.body.innerHTML = __html__['public/tests/index.html'];
+    }
+  });
+
   test('Se parsea correctamente.', function() {
     var parse = make_parse();
 
