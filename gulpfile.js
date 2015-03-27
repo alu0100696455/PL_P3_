@@ -8,15 +8,19 @@ var minifyCSS  = require('gulp-minify-css');
 var karma = require('karma').server;
 
 gulp.task('minify', function () {
-  gulp.src('./csv.js')
+  gulp.src('./app.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('minified'));
+  
+  gulp.src('./public/*.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
 
-  gulp.src('./index.html')
+  gulp.src('./views/*.ejs')
   .pipe(minifyHTML())
   .pipe(gulp.dest('./minified/'))
 
-  gulp.src('./stylesheets/*.css')
+  gulp.src('./public/stylesheets/*.css')
   .pipe(minifyCSS({keepBreaks:true}))
   .pipe(gulp.dest('./minified/'))
 });
